@@ -1,31 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import User from "../user/User";
+import { AppContext } from '../../AppContext'
 import './UserList.css';
 
 const UserList = () => {
-    const users = [
-        {
-        id: 1254,
-        firstname: "Clarance",
-        lastname: "Farley",
-        email: "clarance@clfa.com",
-        note: `I'm loving this so far!`,
-        },
-        {
-        id: 1754,
-        firstname: "Edwin",
-        lastname: "Isang",
-        email: "edwinisang@amex.com",
-        note: `chief this look amazing sha!`,
-        },
-        {
-        id: 1354,
-        firstname: "Juju",
-        lastname: "King",
-        email: "juju@suppermd.com",
-        note: `okay cool!`,
-        },
-    ];
+    const { users } = useContext(AppContext);
 
     return (
         <div className="users_wapper">
@@ -34,6 +13,7 @@ const UserList = () => {
                 {users.map((user) => (
                 <User
                     key={user.id}
+                    id={user.id}
                     firstname={user.firstname}
                     lastname={user.lastname}
                     email={user.email}
