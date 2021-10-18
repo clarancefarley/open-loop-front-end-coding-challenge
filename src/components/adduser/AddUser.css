@@ -1,0 +1,59 @@
+.form_title {
+    font-size: 6vw;
+    font-weight: 700;
+}
+
+.input_group {
+    background: 0;
+    border-bottom: 1px solid #333;
+    outline: none;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 0;
+}
+
+.input_group_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_group_wrapper .lastname, .input_group_wrapper .firstname {
+    flex-grow: 1;
+}
+
+.input {
+    border: none;
+    padding-top: .5em;
+    font-size: 2em;
+    font-weight: 600;
+    flex-grow: 4;
+}
+
+.input:focus{
+    outline: none;
+}
+
+::placeholder {
+    color: #cfcfcf;
+}
+
+.firstname {
+    margin-right: 4em;
+}
+
+.required {
+    font-weight: 600;
+    color: #cfcfcf;
+    margin-left: .2em;
+}
+
+.adduser_btn {
+    padding: 1.5em;
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 2em;
+    background: #000;
+    color: #fcfcfc;
+    border: none;
+}

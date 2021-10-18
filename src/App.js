@@ -1,9 +1,10 @@
 import React from 'react'
+import AddUser from './components/adduser/AddUser'
 
 const App = () => {
   return (
     <div>
-      App
+      <AddUser />
     </div>
   )
 }
