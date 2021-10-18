@@ -1,0 +1,19 @@
+.users_wapper {
+    background-image:     linear-gradient(to bottom, rgb(0, 0, 0), rgba(117, 19, 93, 0.73)),
+    url('https://images.unsplash.com/photo-1634549709262-508c47d4c229?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80');
+    flex-grow: 1;
+    max-height: 100vh;
+    padding: 3em 5em;
+    color: #fff;
+    filter: saturate(0%);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.users_container {
+    max-height: 80vh;
+}
+
+.title {
+    margin-bottom: 1em;
+}
