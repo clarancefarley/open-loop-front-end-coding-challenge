@@ -1,69 +1,58 @@
 .form {
-  margin: 2em 5em;
+  margin: 3em 5em;
 }
-
 .form_title {
   font-size: 6vw;
   font-weight: 700;
   margin-bottom: 0.5em;
 }
-
 .input_group {
+  position: relative;
   background: 0;
   outline: none;
   font-weight: 600;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2.8em;
+  border-bottom: 1px solid #333;
 }
-
 .input_group_wrapper {
   display: flex;
   justify-content: space-between;
 }
-
 .input_group_wrapper .lastname,
 .input_group_wrapper .firstname {
   flex-grow: 1;
 }
-
 .input {
-  padding: 0.5em 0 0.5em 0;
+  padding: 0.3em 0 0.3em 0;
   border: none;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #333;
   font-size: 2em;
   font-weight: 600;
   flex-grow: 4;
 }
-
 .input:focus {
   outline: none;
-  border-bottom: 1px dashed #000;
 }
-
 ::placeholder {
   color: #cfcfcf;
 }
-
 .firstname {
   margin-right: 4em;
 }
-
 .required_icon {
   font-weight: 600;
   color: #cfcfcf;
   margin-left: 0.2em;
 }
-
 .color_disabled {
-    padding: 1em;
-    font-size: 2em;
-    font-weight: 600;
-    background: #cacaca77;
-    color: #cfcfcf;
-    border: none;
+  padding: 1em;
+  font-size: 2em;
+  font-weight: 600;
+  background: #cacaca77;
+  color: #cfcfcf;
+  border: none;
 }
-
 .color_default {
   padding: 1em;
   font-size: 2em;
@@ -72,13 +61,13 @@
   color: #fcfcfc;
   border: none;
 }
-
 .error_border {
   border-bottom: 1px solid #c55252;
 }
-
 .error {
   font-weight: 600;
   color: #c55252;
-  margin-bottom: 1em;
+  position: absolute;
+  left: 0;
+  bottom: -2em;
 }

@@ -11,7 +11,7 @@ const AddUser = () => {
     formState: { errors, isValid },
     reset,
     setFocus,
-  } = useForm({ mode: "onBlur"});
+  } = useForm({ mode: "onBlur" });
 
   const { dispatch } = useContext(AppContext);
 
@@ -25,7 +25,6 @@ const AddUser = () => {
     reset();
   };
 
-  
   useEffect(() => {
     setFocus("firstname");
   }, [setFocus]);
@@ -36,13 +35,17 @@ const AddUser = () => {
 
       <div className="form_body">
         <div className="input_group_wrapper">
-          <div className="input_group firstname">
+          <div
+            className={`input_group firstname ${
+              errors.firstname && "error_border"
+            }`}
+          >
             <label htmlFor="firstname">
               First Name<span className="required_icon">*</span>
             </label>
             <input
               type="text"
-              className={`input ${errors.firstname && "error_border"}`}
+              className={`input`}
               {...register("firstname", {
                 required: "Please provide a first name.",
               })}
@@ -53,13 +56,17 @@ const AddUser = () => {
             )}
           </div>
 
-          <div className="input_group lastname">
+          <div
+            className={`input_group lastname ${
+              errors.lastname && "error_border"
+            }`}
+          >
             <label htmlFor="lastname">
               Last Name<span className="required_icon">*</span>
             </label>
             <input
               type="text"
-              className={`input ${errors.lastname && "error_border"}`}
+              className={`input`}
               {...register("lastname", {
                 required: "Please provide a last name.",
               })}
@@ -70,13 +77,13 @@ const AddUser = () => {
             )}
           </div>
         </div>
-        <div className="input_group">
+        <div className={`input_group ${errors.email && "error_border"}`}>
           <label htmlFor="email">
             Email<span className="required_icon">*</span>
           </label>
           <input
             type="email"
-            className={`input ${errors.email && "error_border"}`}
+            className={`input`}
             {...register("email", {
               required: "Please provide an email address.",
               pattern: {
@@ -90,13 +97,13 @@ const AddUser = () => {
             <small className="error">{errors.email.message}</small>
           )}
         </div>
-        <div className="input_group">
+        <div className={`input_group ${errors.note && "error_border"}`}>
           <label htmlFor="note">
             Note<span className="required_icon">*</span>
           </label>
           <input
             type="note"
-            className={`input ${errors.note && "error_border"}`}
+            className={`input`}
             {...register("note", {
               required: "Please provide a note.",
             })}
@@ -107,7 +114,11 @@ const AddUser = () => {
           )}
         </div>
 
-        <button type="submit" disabled={!isValid} className={`${!isValid ? "color_disabled" : "color_default"}`}>
+        <button
+          type="submit"
+          disabled={!isValid}
+          className={`${!isValid ? "color_disabled" : "color_default"}`}
+        >
           Add User
         </button>
       </div>
